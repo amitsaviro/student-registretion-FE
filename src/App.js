@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import RegisteredStudent from "./components/RegisteredStudent/RegisteredStudent";
+
+const DUMMY_REGISTERED_STUDENTS = [
+  {
+    id: "1",
+    studnetName: "Yonit Levi",
+    course: "fullstack",
+  },
+  {
+    id: "2",
+    studnetName: "Eli Finish",
+    course: "qa",
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <RegisteredStudent registeredStudent={DUMMY_REGISTERED_STUDENTS[0]} />
+      <RegisteredStudent registeredStudent={DUMMY_REGISTERED_STUDENTS[1]} />
     </div>
   );
 }
